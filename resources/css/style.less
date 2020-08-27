@@ -1,0 +1,77 @@
+@mobile: ~"only screen and (max-width: 667px)";
+@desktop: ~"only screen and (min-width: 668px)";
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	color: rgba(0, 0, 0, 1);
+	background: rgba(255, 255, 255, 0.99);
+}
+
+html {
+	background: #000000;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+
+	@media @mobile {
+		
+	}
+	
+	@media @desktop {
+	
+	}
+
+	#headers {
+		position: fixed;
+		width: 400px;
+		height: 400px;
+		top: 50%;
+		left: 50%;
+		margin-top: -200px;
+		margin-left: -420px;
+		z-index: 2;
+
+		h1 {
+			font-size: 60px;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: rgba(255, 255, 255, 1);
+		}
+	
+		h2 {
+			font-size: 30px;
+			font-family: 'Roboto Mono';
+			font-weight: 400;
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	#phone {
+		width: 1512px / 2;
+		height: 1904px / 2;
+		background-image: url('../images/placeholder.png');
+		background-size: 100%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -1904px / 4;
+		margin-left: (-1512px / 4) + 200;
+		z-index: 2;
+	}
+
+	#floor {
+		width: 2000px;
+		height: 400px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: 200px;
+		margin-left: -1000px;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.09) 0%, transparent 50%);
+		z-index: 1;
+	}
+}
